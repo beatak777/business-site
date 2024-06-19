@@ -1,42 +1,61 @@
+/* Apply mobile-first approach */
+body {
+  font-family: Arial, sans-serif;
+  margin: 1px;
+  padding: 1px;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
+  max-width: 100%; /* Use full width */
+  margin: 7px auto;
+  padding: 3rem; /* Reduced padding */
+  box-sizing: border-box; /* Ensure padding is included in the max-width */
+  text-align:justify
 }
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+
+
+/* Media query for smartphones */
+@media (max-width: 767px) {
+  .show-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for smartphones */
+  }
+  
+  .show-card {
+    margin-bottom: 20px; /* Increased margin between cards for better spacing */
+  }
+}
+
+/* Adjust dropdown menu styles for mobile */
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically */
+  }
+
+  .navbar-collapse {
+    text-align: center; /* Center align navbar items */
+  }
+
+  .dropdown-menu {
+    max-height: calc(100vh - 120px); /* Set maximum height based on viewport height minus header/footer heights */
+    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 1000; /* Ensure dropdown menu is above other content */
+  }
+}
+
+.dropdown-menu {
+  max-height: 400px; /* Set a maximum height for the dropdown menu */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.hero-section img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  align-items: center;
 }

@@ -25,9 +25,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+
 }
 
 h1 {
@@ -65,4 +66,24 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Custom CSS to style the Navbar */
+.navbar {
+  background-color: #ffffff; /* Set your desired background color */
+  text-size-adjust: 34px;
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: left;
+  text-align: center;
+  padding: 6px;
+
+}
+
+.nav-link {
+  padding-right: 25px;
+  font-size: 27px;
+  
 }
